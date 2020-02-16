@@ -1,0 +1,8 @@
+# BEGIN Sciors
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^([-0-9a-zA-Z]{6})/$ index.php?code=$1 [NC]
+    RewriteRule ^([-0-9a-zA-Z]{6})$ index.php?code=$1 [NC]
+</IfModule>
+# END Sciors
