@@ -32,24 +32,22 @@ try {
   <body>
     <h1>Generated URLs</h1>
     <hr>
-    <div>
-      <a href="set.php">Create new shoten URL</a>
-      <table>
-        <thead>
-          <th>ID</th>
-          <th>URL</th>
-          <th>Short URL</th>
-        </thead>
-        <tbody>
-          <?php while ($row = $statement->fetch(PDO::FETCH_ASSOC)) : ?>
-            <tr>
-              <td><?= $row['id']?></td>
-              <td><a href="<?= $row['url']?>"><?= $row['url']?></a></td>
-              <td><?= $base_url . $row['short_code']?></td>
-            </tr>
-          <?php endwhile; ?>
-        </tbody>
-      </table>
-    </div>
+    <a href="set.php">Create new shoten URL</a>
+    <table>
+      <thead>
+        <th>ID</th>
+        <th>URL</th>
+        <th>Short URL</th>
+      </thead>
+      <tbody>
+        <?php while ($row = $statement->fetch(PDO::FETCH_ASSOC)) : ?>
+          <tr>
+            <td><?= $row['id']?></td>
+            <td><a href="<?= $row['url']?>"><?= $row['url']?></a></td>
+            <td><?= $base_url . $row['short_code']?></td>
+          </tr>
+        <?php endwhile; ?>
+      </tbody>
+    </table>
   </body>
 </html>
