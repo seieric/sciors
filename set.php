@@ -44,6 +44,7 @@ if(isset($_POST['url'])) {
   <body>
     <h1>Create new short url</h1>
     <hr>
+    <a href="list.php">See generated URLs</a>
     <?php if(isset($short_url)) : ?>
       <p>This is your short url for "<?php echo $url; ?>".</p>
       <a href="<?php echo $short_url; ?>"style="color: green;"><?php echo $short_url ?></a>
